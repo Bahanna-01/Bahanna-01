@@ -7,13 +7,14 @@
   <meta name="description" content="Personal website for CSD112 Lab 2, created by Barbara Hanna">
   <title>Barbara Hanna's Website</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyWebSite" />
   <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
       <div id="survey-section">
         <h1>Survey</h1>
         <form action="https://formspree.io/f/xldpnjjj" method="POST">
-  <input type="hidden" name="_next" value="thankyou.html">
+          <input type="hidden" name="_next" value="thankyou.html">
           <!-- Control 1: Text -->
           <label for="name_field">What is your name? <span class="note">(required)</span></label>
           <input type="text" id="name_field" name="name_field" required>
@@ -44,7 +45,8 @@
           <input type="email" id="email_field" name="email_field" required>
 
           <!-- Control 3: Number -->
-          <label for="best_whole_number">Which whole number is best? <span class="note">(must be greater than 0)</span></label>
+          <label for="best_whole_number">Which whole number is best? <span class="note">(must be greater than
+              0)</span></label>
           <input type="number" id="best_whole_number" name="best_whole_number" min="1" step="1">
 
           <!-- Control 4: Date -->
@@ -90,7 +92,8 @@
 
           <!-- Control 7: Textarea -->
           <label for="life_meaning">What is the meaning of life?</label>
-          <textarea id="life_meaning" name="life_meaning" rows="5" cols="50" placeholder="Enter the correct answer here"></textarea>
+          <textarea id="life_meaning" name="life_meaning" rows="5" cols="50"
+            placeholder="Enter the correct answer here"></textarea>
 
           <!-- Control 8: Submit Button -->
           <button type="submit">Submit</button>
