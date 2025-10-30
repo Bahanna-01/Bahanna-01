@@ -18,26 +18,27 @@
 
 /* Set default font, background color, and text color */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Lato', sans-serif;
   background-color: #fdf6f0;
   color: #333;
   margin: 0;
   padding: 0;
+  line-height: 1.3;
 }
 
 /* Style the header with background, padding, and top border */
 header {
-  background-color: #f2c1d1;
+  background-color: #b35c7a;
   padding: 15px;
   text-align: center;
-  border-top: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid rgb(250, 250, 250);
   margin-left: -2em;
   margin-right: -2em;
 }
 
 /* Add bottom dotted border to navigation bar */
 header nav {
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted rgb(255, 255, 255);
   padding: 0 2em;
 }
 
@@ -54,6 +55,7 @@ header nav ul li {
   margin: 0 15px;
 }
 
+
 /* Style navigation links with hover effect */
 header nav a {
   display: inline-block;
@@ -65,7 +67,16 @@ header nav a {
   font-weight: bold;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 header nav a:hover {
+  text-decoration: none;
   border-top: 4px solid #b35c7a;
   color: #b35c7a;
 }
@@ -76,7 +87,11 @@ main h1 {
   font-size: 2.5em;
   margin-top: 0.5em;
   margin-bottom: 1em;
-  color: #b35c7a;
+  background: linear-gradient(to right, #b35c7a, #f7cdd5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
 }
@@ -94,8 +109,9 @@ nav ul li {
 
 /* Style general navigation links */
 nav ul li a {
+  font-family: 'Italiana', serif;
   text-decoration: none;
-  color: #333;
+  color: #f7f7f7;
   font-weight: bold;
 }
 
@@ -106,10 +122,14 @@ main {
   margin: auto;
 }
 
-/* Style headings with accent color */
+/* Style headings with Italiana font and accent color */
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Italiana', serif;
   color: #b35c7a;
 }
 
@@ -171,7 +191,14 @@ a[href="#top"] {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  break-inside: avoid;
 }
+
+#making-a-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
 
 #making-a-table caption {
   font-size: 1.4em;
@@ -300,4 +327,71 @@ dt::after {
 /* Customize text selection color */
 ::selection {
   background-color: #8b5fbf;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
+/* Remove padding do <ul> externo */
+#survey-section ul {
+  padding: 0;
+}
+
+/* Remove bullets dos <li> */
+#survey-section ul li {
+  list-style-type: none;
+}
+
+.radio-list {
+  padding: 0;
+}
+
+.radio-list li {
+  list-style-type: none;
+}
+
+.bio {
+  column-count: 3;
+  column-gap: 2em;
+}
+
+.bio img {
+  max-width: 100%;
+}
+
+.profile-img {
+  padding: 2%;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#making-a-table {
+  break-inside: avoid;
+  margin-top: 1em;
+}
+
+#making-a-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#making-a-table caption {
+  caption-side: bottom;
+}
+
+.float-left {
+  float: left;
+  margin: 1em;
+  border-radius: 8px;
+}
+
+.float-right {
+  float: right;
+  margin: 1em;
+  border-radius: 8px;
+}
+
+footer {
+  clear: both;
 }
